@@ -5,7 +5,8 @@
   <input v-else class="button" :class="innerClass" :type="nativeType" @click="clickHandler" />
 </template>
 
-<script>
+<script  lang="ts">
+import { SetupContext } from 'vue';
 import { computed } from '@vue/reactivity';
 import { color } from '../utils/colors';
 import { size } from '../utils/sizes';
@@ -16,12 +17,12 @@ export default {
     tag: {
       type: String,
       default: 'button',
-      validator: (val) => ['button', 'a', 'input'].includes(val),
+      validator: (val: string) => ['button', 'a', 'input'].includes(val),
     },
     nativeType: {
       type: String,
       default: 'submit',
-      validator: (val) => ['submit', 'reset'].includes(val),
+      validator: (val: string) => ['submit', 'reset'].includes(val),
     },
     color,
     light: {
@@ -58,8 +59,8 @@ export default {
       default: false,
     },
   },
-  setup(props, { emit, attrs }) {
-    const clickHandler = (e) => emit('click', e);
+  setup(props: any, { emit }: SetupContext) {
+    const clickHandler = (e: Event) => emit('click', e);
 
     const innerClass = computed(() => {
       const classes = [];
@@ -78,8 +79,7 @@ export default {
 
     return {
       clickHandler,
-      innerClass,
-      attrs,
+      innerClass
     }
   }
 }

@@ -4,7 +4,7 @@
   </span>
 </template>
 
-<script>
+<script lang="ts">
 import { computed } from '@vue/reactivity';
 import { size } from '../utils/sizes';
 import { color } from '../utils/colors';
@@ -19,7 +19,7 @@ export default {
     type: {
       type: String,
       required: true,
-      validator: (val) => ['regular', 'solid'].includes(val),
+      validator: (val: string) => ['regular', 'solid'].includes(val),
     },
     pack: {
       type: String,
@@ -28,7 +28,7 @@ export default {
     size,
     color,
   },
-  setup(props) {
+  setup(props: any) {
     const innerClass = computed(() => {
       let classIn = '';
       if (props.size) classIn += ` is-${props.size} `;

@@ -2,7 +2,7 @@
   <progress class="progress" :class="innerClass" :value="value" :max="max" ></progress>
 </template>
 
-<script>
+<script lang="ts">
 import { size } from '../utils/sizes';
 import { color } from '../utils/colors';
 import { computed } from '@vue/reactivity';
@@ -25,7 +25,7 @@ export default {
     size,
     color,
   },
-  setup(props) {
+  setup(props: any) {
     const innerClass = computed(() => {
       const classes = [];
       if (props.color) classes.push(`is-${props.color}`);

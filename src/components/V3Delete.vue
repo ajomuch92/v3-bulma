@@ -2,7 +2,9 @@
   <button class="delete" :class="innerClass" @click="clickHandler" />
 </template>
 
-<script>
+<script lang="ts">
+import { SetupContext } from 'vue';
+import { computed } from 'vue';
 import { size } from '../utils/sizes';
 
 export default {
@@ -10,8 +12,8 @@ export default {
   props: {
     size,
   },
-  setup(props, { emit }) {
-    const clickHandler = (e) => emit('click', e);
+  setup(props: any, { emit }: SetupContext) {
+    const clickHandler = (e: Event) => emit('click', e);
 
     const innerClass = computed(() => {
       const classes = [];

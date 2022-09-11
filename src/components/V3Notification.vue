@@ -5,7 +5,8 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { SetupContext } from 'vue';
 import V3Delete from './V3Delete.vue';
 import { color } from '../utils/colors';
 import { computed } from '@vue/reactivity';
@@ -24,8 +25,8 @@ export default {
     },
     color,
   },
-  setup(props, { emit }) {
-    const deleteClickHandler = (e) => emit('delete-click', e);
+  setup(props: any, { emit }: SetupContext) {
+    const deleteClickHandler = (e: Event) => emit('delete-click', e);
 
     const innerColor = computed(() => {
       const { color } = props;

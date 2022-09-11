@@ -4,7 +4,8 @@
   </span>
 </template>
 
-<script>
+<script lang="ts">
+import { computed } from 'vue';
 import { size } from '../utils/sizes';
 import { color } from '../utils/colors';
 
@@ -18,7 +19,7 @@ export default {
       default: false,
     },
   },
-  setup(props) {
+  setup(props: any) {
     const innerClass = computed(() => {
       const classes = [];
       if (props.color) classes.push(`is-${props.color}`);

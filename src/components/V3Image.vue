@@ -4,7 +4,7 @@
   </figure>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'V3Image',
   props: {
@@ -15,7 +15,7 @@ export default {
     ratio: {
       type: String,
       default: 'square',
-      validator: (val) => ['16x16', '24x24', '32x32', '48x48', '64x64', '96x96', '128x128', '1by1', 'square', '5by4',
+      validator: (val: string) => ['16x16', '24x24', '32x32', '48x48', '64x64', '96x96', '128x128', '1by1', 'square', '5by4',
         '4by3', '3by2', '5by3', '16by9', '2by1', '3by1', '4by5', '3by4', '2by3', '3by5', '9by16', '1by2', '1by3'].includes(val),
     },
     rounded: {
