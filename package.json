@@ -30,5 +30,13 @@
       "import": "./dist/v3-bulma.es.js",
       "require": "./dist/v3-bulma.umd.js"
     }
-  }
+  },
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue 3",
+    "bulma",
+    "bulma css",
+    "components"
+  ]
 }
