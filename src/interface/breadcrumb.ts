@@ -1,5 +1,6 @@
-export interface BreadcrumbItem {
-  label: String;
-  icon?: String;
-  href: String;
+export default interface BreadcrumbItem {
+  label: string;
+  icon?: string;
+  href: string;
+  active?: Boolean;
 }
