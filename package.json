@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/ajomuch92/v3-bulma"
   },
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -31,6 +31,7 @@
       "require": "./dist/v3-bulma.umd.js"
     }
   },
+  "license": "MIT",
   "keywords": [
     "vue",
     "vuejs",
