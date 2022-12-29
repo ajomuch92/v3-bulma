@@ -32,4 +32,4 @@ createApp(App).use(V3Bulma).mount('#app');
 
 ## Development
 
-Want to contribute? Great!. Open a [new PR here](https://github.com/ajomuch92/wp-api-client-enhance/pulls) or a [new issue here](https://github.com/ajomuch92/wp-api-client-enhance/issues)
+Want to contribute? Great!. Open a [new PR here](https://github.com/ajomuch92/v3-bulma/pulls) or a [new issue here](https://github.com/ajomuch92/v3-bulma/issues)
